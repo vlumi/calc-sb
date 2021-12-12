@@ -8,16 +8,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Calculator View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="calc_sb" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CalculatorViewController" customModule="calc_sb" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="7NH-9v-Jwh">
-                                <rect key="frame" x="60" y="94" width="255" height="275"/>
+                                <rect key="frame" x="60" y="94" width="255" height="285"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RESULT" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZb-Kd-wl4">
                                         <rect key="frame" x="0.0" y="0.0" width="255" height="50"/>
@@ -29,7 +29,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="41" translatesAutoresizingMaskIntoConstraints="NO" id="RC8-PD-rp2">
-                                        <rect key="frame" x="0.0" y="70" width="255" height="205"/>
+                                        <rect key="frame" x="0.0" y="70" width="255" height="215"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="ylr-ZM-7fb">
                                                 <rect key="frame" x="0.0" y="0.0" width="33" height="147"/>
@@ -127,14 +127,14 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="9v4-aB-tGE">
-                                                <rect key="frame" x="222" y="0.0" width="33" height="169"/>
+                                                <rect key="frame" x="222" y="0.0" width="33" height="215"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZQ-XF-IWd">
                                                         <rect key="frame" x="0.0" y="0.0" width="33" height="31"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="/"/>
                                                         <connections>
-                                                            <action selector="keySlash:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r72-sr-Fal"/>
+                                                            <action selector="keyDivide:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VtE-eh-ctA"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yig-lE-JCI">
@@ -142,7 +142,7 @@
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="*"/>
                                                         <connections>
-                                                            <action selector="keyStar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="njG-bB-nZY"/>
+                                                            <action selector="keyMultiply:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ksC-dD-OKU"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="72d-Qk-BOA">
@@ -159,6 +159,15 @@
                                                         <buttonConfiguration key="configuration" style="plain" title="+"/>
                                                         <connections>
                                                             <action selector="keyPlus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LBM-zE-h3t"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eei-wx-tSv">
+                                                        <rect key="frame" x="0.0" y="184" width="33" height="31"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="="/>
+                                                        <connections>
+                                                            <action selector="keyPlus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VFI-Ia-F2v"/>
+                                                            <action selector="keyResult:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PaZ-ha-4XT"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
