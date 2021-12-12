@@ -19,103 +19,97 @@ class CalculatorViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        update()
+        updateView()
     }
     
-    private func update() {
-        if (inputValue.isInput()) {
-            print("Show input value \(inputValue.getValue())")
-            labelResult.text = "\(inputValue.getValue())"
-        } else {
-            print("Show calculator value \(calculator.value)")
-            labelResult.text = "\(calculator.value)"
-        }
+    private func updateView() {
+        let value = inputValue.isInput() ? inputValue.getValue() : calculator.value
+        labelResult.text = "\(value)"
+    }
+    private func calculate() {
+        let value = inputValue.getValue()
+        inputValue.reset()
+        calculator.calculate(value, currentOperator)
     }
     
     @IBAction func key0(_ sender: Any) {
         inputValue.addDigit(digit: 0)
-        update()
+        updateView()
     }
     @IBAction func key1(_ sender: Any) {
         inputValue.addDigit(digit: 1)
-        update()
+        updateView()
     }
     @IBAction func key2(_ sender: Any) {
         inputValue.addDigit(digit: 2)
-        update()
+        updateView()
     }
     @IBAction func key3(_ sender: Any) {
         inputValue.addDigit(digit: 3)
-        update()
+        updateView()
     }
     @IBAction func key4(_ sender: Any) {
         inputValue.addDigit(digit: 4)
-        update()
+        updateView()
     }
     @IBAction func key5(_ sender: Any) {
         inputValue.addDigit(digit: 5)
-        update()
+        updateView()
     }
     @IBAction func key6(_ sender: Any) {
         inputValue.addDigit(digit: 6)
-        update()
+        updateView()
     }
     @IBAction func key7(_ sender: Any) {
         inputValue.addDigit(digit: 7)
-        update()
+        updateView()
     }
     @IBAction func key8(_ sender: Any) {
         inputValue.addDigit(digit: 8)
-        update()
+        updateView()
     }
     @IBAction func key9(_ sender: Any) {
         inputValue.addDigit(digit: 9)
-        update()
+        updateView()
+    }
+    @IBAction func keyDot(_ sender: Any) {
+        inputValue.addDecimalPoint()
+        updateView()
     }
     
-    private func calculate() {
-        let value = inputValue.getValue()
+    @IBAction func keyClearAll(_ sender: Any) {
         inputValue.reset()
-        
-        guard let op = currentOperator else {
-            calculator.reset()
-            calculator.add(value)
-            return
-        }
-        
-        switch op {
-        case .plus: calculator.add(value)
-        case .minus: calculator.deduct(value)
-        case .multiply: calculator.multiply(value)
-        case .divide: calculator.divide(value)
-        }
-        print("Calculated value: \(calculator.value)")
+        calculator.reset()
+        updateView()
     }
-    
+    @IBAction func keyClear(_ sender: Any) {
+        inputValue.reset()
+        updateView()
+    }
     @IBAction func keyPlus(_ sender: Any) {
         calculate()
         currentOperator = .plus
-        update()
+        updateView()
     }
     @IBAction func keyMinus(_ sender: Any) {
         calculate()
         currentOperator = .minus
-        update()
+        updateView()
     }
     @IBAction func keyMultiply(_ sender: Any) {
         calculate()
         currentOperator = .multiply
-        update()
+        updateView()
     }
     @IBAction func keyDivide(_ sender: Any) {
         calculate()
         currentOperator = .divide
-        update()
+        updateView()
     }
     @IBAction func keyResult(_ sender: Any) {
         calculate()
         currentOperator = nil
-        update()
+        updateView()
     }
 }
 

@@ -19,6 +19,7 @@
 		A2FD6B3D2765FDEB00372114 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FD6B3C2765FDEB00372114 /* Calculator.swift */; };
 		A2FD6B3F2765FE1F00372114 /* InputValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FD6B3E2765FE1F00372114 /* InputValue.swift */; };
 		A2FD6B412766048200372114 /* Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FD6B402766048200372114 /* Operator.swift */; };
+		A2FD6B43276626A000372114 /* InputButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FD6B42276626A000372114 /* InputButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		A2FD6B3C2765FDEB00372114 /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
 		A2FD6B3E2765FE1F00372114 /* InputValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputValue.swift; sourceTree = "<group>"; };
 		A2FD6B402766048200372114 /* Operator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operator.swift; sourceTree = "<group>"; };
+		A2FD6B42276626A000372114 /* InputButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 		A2FD6B3A2765FD8F00372114 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A2FD6B42276626A000372114 /* InputButton.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				A2FD6B3D2765FDEB00372114 /* Calculator.swift in Sources */,
 				A25FD9AB275F8B4E00D99999 /* AppDelegate.swift in Sources */,
 				A25FD9AD275F8B4E00D99999 /* SceneDelegate.swift in Sources */,
+				A2FD6B43276626A000372114 /* InputButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

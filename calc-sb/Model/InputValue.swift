@@ -26,7 +26,9 @@ class InputValue {
         if value.count == 0 {
             value += "0"
         }
-        value += "."
+        if !value.contains(".") {
+            value += "."
+        }
         print("Added decimal point, now \(value)")
     }
     
